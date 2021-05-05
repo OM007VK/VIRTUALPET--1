@@ -16,6 +16,7 @@ function setup() {
   database=firebase.database();
   foodStock=database.ref("Food")
   foodStock.on("value",readFoodStock)
+  database.ref("/").update({Food:20})
 }
 
 function draw() {  
